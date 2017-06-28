@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Plan from './Plan';
 import './App.css';
 
 class App extends Component {
@@ -9,6 +10,7 @@ class App extends Component {
           <h2>Insurance App</h2>
           <h3>Powered by <a href="https://docs.vericred.com">vericred.com</a></h3>
         </div>
+        <Plan />
       </div>
     );
   }
