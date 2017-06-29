@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Applicant from './Applicant';
 
 class Applicants extends Component {
   render() {
-    const applicants = [{ id: 0, age: 21, smoker: true }]
+    const { applicants } = this.props
     return (
       <div className="Applicants">
         {applicants.map(applicant =>
@@ -14,4 +15,8 @@ class Applicants extends Component {
   }
 }
 
-export default Applicants;
+const mapStateToProps = state => ({
+  applicants: state.applicants
+})
+
+export default connect(mapStateToProps, null)(Applicants);

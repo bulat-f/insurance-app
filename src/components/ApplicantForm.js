@@ -15,6 +15,7 @@ class ApplicantForm extends Component {
 
   addApplicant() {
     const { age, child, smoker } = this.state;
+    this.props.addApplicant(age, child, smoker);
   }
 
   render() {
