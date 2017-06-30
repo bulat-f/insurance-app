@@ -8,7 +8,13 @@ class Applicants extends Component {
     return (
       <div className="Applicants">
         {applicants.map(applicant =>
-          <Applicant key={applicant.id} age={applicant.age} smoker={applicant.smoker} />
+          <Applicant
+            key={applicant.id}
+            id={applicant.id}
+            age={applicant.age}
+            child={applicant.child}
+            smoker={applicant.smoker}
+          />
         )}
       </div>
     );

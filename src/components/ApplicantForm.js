@@ -7,15 +7,17 @@ class ApplicantForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      age: null,
-      child: null,
-      smoker: null
+      age: '',
+      child: false,
+      smoker: false
     };
   }
 
   addApplicant() {
     const { age, child, smoker } = this.state;
+    console.log(age, child, smoker);
     this.props.addApplicant(age, child, smoker);
+    this.setState({ age: '', child: false, smoker: false })
   }
 
   render() {
@@ -25,6 +27,7 @@ class ApplicantForm extends Component {
           <input
             type="number"
             placeholder="Age of Patient"
+            value={this.state.age}
             onChange={event => this.setState({ age: event.target.value })}
           />
         </div>
@@ -32,14 +35,16 @@ class ApplicantForm extends Component {
           <lable>
             <input
               type="checkbox"
-              onChange={event => this.setState({ child: event.target.value })}
+              checked={this.state.child}
+              onChange={event => this.setState({ child: event.target.checked })}
             />
             Child
           </lable>
           <lable>
             <input
               type="checkbox"
-              onChange={event => this.setState({ smoker: event.target.value })}
+              checked={this.state.smoker}
+              onChange={event => this.setState({ smoker: event.target.checked })}
             />
             Smoker
           </lable>

@@ -9,3 +9,8 @@ export const addApplicant = (age, child, smoker) => ({
   child,
   smoker
 });
+
+export const removeApplicant = (id) => ({
+  type: types.REMOVE_APPLICANT,
+  id
+});
