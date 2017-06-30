@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
-import './Applicant.css';
+import './Applicant.scss';
 
 class Applicant extends Component {
   render() {
     return (
       <div className="Applicant">
-        <p>
+        <div className="Applicant-prop">
           <strong>Age:</strong> {this.props.age}
-        </p>
-        <p>
+        </div>
+        <div className="Applicant-prop">
           <strong>Child:</strong> {this.props.child}
-        </p>
-        <p>
+        </div>
+        <div className="Applicant-prop">
           <strong>Smoker:</strong> {this.props.smoker}
-        </p>
+        </div>
+        <div className="Applicant-control">
+          <a>remove</a>
+        </div>
       </div>
     );
   }

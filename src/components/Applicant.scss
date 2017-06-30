@@ -1,0 +1,20 @@
+.Applicant {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 8px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+
+  .Applicant-prop {
+    display: inline-block;
+  }
+
+  .Applicant-control {
+    border-left: 1px #f0f0f0 solid;
+    padding: 16px;
+    margin: -16px -16px -16px 0;
+    background-color: red;
+    color: #f0f0f0;
+  }
+}

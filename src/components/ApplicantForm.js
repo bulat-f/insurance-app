@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addApplicant } from '../actions';
-import './ApplicantForm.css';
+import './ApplicantForm.scss';
 
 class ApplicantForm extends Component {
   constructor(props) {
@@ -20,7 +20,7 @@ class ApplicantForm extends Component {
 
   render() {
     return (
-      <div className="Applicant">
+      <div className="ApplicantForm">
         <div className="form-group">
           <input
             type="number"
