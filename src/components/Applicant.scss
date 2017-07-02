@@ -8,6 +8,11 @@
 
   .Applicant-prop {
     display: inline-block;
+    span {
+      display: inline-block;
+      min-width: 48px;
+      padding-left: 8px;
+    }
   }
 
   .Applicant-control {

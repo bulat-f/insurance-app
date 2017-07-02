@@ -12,13 +12,16 @@ class Applicant extends Component {
     return (
       <div className="Applicant">
         <div className="Applicant-prop">
-          <strong>Age:</strong> {age}
+          <strong>Age:</strong>
+          <span>{age}</span>
         </div>
         <div className="Applicant-prop">
-          <strong>Child:</strong> {child.toString()}
+          <strong>Child:</strong>
+          <span>{child.toString()}</span>
         </div>
         <div className="Applicant-prop">
-          <strong>Smoker:</strong> {smoker.toString()}
+          <strong>Smoker:</strong>
+          <span>{smoker.toString()}</span>
         </div>
         <a
           className="Applicant-control"

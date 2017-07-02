@@ -23,32 +23,28 @@ class ApplicantForm extends Component {
   render() {
     return (
       <div className="ApplicantForm">
-        <div className="form-group">
+        <input
+          type="number"
+          placeholder="Age of Patient"
+          value={this.state.age}
+          onChange={event => this.setState({ age: event.target.value })}
+        />
+        <lable>
           <input
-            type="number"
-            placeholder="Age of Patient"
-            value={this.state.age}
-            onChange={event => this.setState({ age: event.target.value })}
+            type="checkbox"
+            checked={this.state.child}
+            onChange={event => this.setState({ child: event.target.checked })}
           />
-        </div>
-        <div className="form-group">
-          <lable>
-            <input
-              type="checkbox"
-              checked={this.state.child}
-              onChange={event => this.setState({ child: event.target.checked })}
-            />
-            Child
-          </lable>
-          <lable>
-            <input
-              type="checkbox"
-              checked={this.state.smoker}
-              onChange={event => this.setState({ smoker: event.target.checked })}
-            />
-            Smoker
-          </lable>
-        </div>
+          Child
+        </lable>
+        <lable>
+          <input
+            type="checkbox"
+            checked={this.state.smoker}
+            onChange={event => this.setState({ smoker: event.target.checked })}
+          />
+          Smoker
+        </lable>
         <button onClick={event => this.addApplicant()}>
           Add new applicant
         </button>
