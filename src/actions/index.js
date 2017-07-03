@@ -25,3 +25,11 @@ export const removeDrugPackage = (id) => ({
   type: types.REMOVE_DRUG_PACKAGE,
   id
 })
+
+export const setPlanFields = (fields) => ({
+  type: types.SET_PLAN_FIELDS,
+  fips_code: fields.fips_code,
+  household_income: fields.household_income,
+  household_size: fields.household_size,
+  zip_code: fields.zip_code
+})
