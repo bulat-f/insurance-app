@@ -14,3 +14,14 @@ export const removeApplicant = (id) => ({
   type: types.REMOVE_APPLICANT,
   id
 });
+
+export const addDrugPackage = (id, med_id) => ({
+  type: types.ADD_DRUG_PACKAGE,
+  id,
+  med_id
+})
+
+export const removeDrugPackage = (id) => ({
+  type: types.REMOVE_DRUG_PACKAGE,
+  id
+})

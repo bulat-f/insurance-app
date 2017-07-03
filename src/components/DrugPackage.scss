@@ -1,0 +1,32 @@
+.DrugPackage {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 8px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+
+  .DrugPackage-prop {
+    display: inline-block;
+    span {
+      display: inline-block;
+      min-width: 48px;
+      padding-left: 8px;
+    }
+  }
+
+  .DrugPackage-control {
+    border-left: 1px #f0f0f0 solid;
+    margin: -16px -16px -16px 0;
+    background-color: #f00505;
+    color: #f0f0f0;
+    padding: 16px;
+    cursor: pointer;
+    font-weight: 600;
+
+    &:hover {
+      background-color: #e00;
+      color: #f5f5f5;
+    }
+  }
+}

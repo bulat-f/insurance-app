@@ -12,5 +12,13 @@ input, button {
 .row {
   .col-md-6 {
     width: 50%;
+    display: inline-block;
+    float: left;
+  }
+
+  .col-md-4 {
+    width: calc(100%/3);
+    display: inline-block;
+    float: left;
   }
 }

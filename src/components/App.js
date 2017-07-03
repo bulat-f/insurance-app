@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ApplicantForm from './ApplicantForm';
 import Applicants from './Applicants';
-import './Plan.css';
+import DrugPackageForm from './DrugPackageForm';
+import DrugPackages from './DrugPackages';
 
 class App extends Component {
   render() {
@@ -15,7 +16,9 @@ class App extends Component {
           </div>
         </div>
 
-        <div class="col-md-6">
+        <div className="col-md-6">
+          <DrugPackageForm />
+          <DrugPackages />
         </div>
       </div>
     );
