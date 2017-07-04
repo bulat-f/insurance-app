@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { setPlanFields } from '../actions';
+import { setPlanFields, findPlans } from '../actions';
 import './PlanFields.scss';
 
 class PlanFields extends Component {
@@ -9,18 +9,9 @@ class PlanFields extends Component {
     this.state = this.props;
   }
 
-  defaultState() {
-    return {
-      fips_code: '',
-      household_income: '',
-      household_size: 1,
-      zip_code: ''
-    }
-  }
-
   send() {
     this.props.setPlanFields(this.state);
-    this.setState(this.props);
+    this.props.findPlans();
   }
 
   render() {
@@ -77,4 +68,4 @@ const mapStateToProps = state => ({
   zip_code: state.zip_code
 })
 
-export default connect(mapStateToProps, { setPlanFields })(PlanFields);
+export default connect(mapStateToProps, { setPlanFields, findPlans })(PlanFields);
